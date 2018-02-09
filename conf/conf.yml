@@ -1,0 +1,37 @@
+default:
+
+    data_specification:
+
+        dt_sales:
+            order: sales
+            initialise: TRUE
+            ext: s3
+            init_function: init_sales
+            assign: dt_sales
+            save_as: cache/sales.fst  
+            model: !expr suppressWarnings(yaml::read_yaml("conf/models/sales.yml"))
+            extra:
+                profile: 'default'
+                bucket: 'my_bucket'
+                filepath_credentials: 'secrets/credentials'
+
+        dt_meta:
+            order: 2
+            initialise: TRUE
+            ext: NULL
+            init_function: init_meta
+            assign: dt_meta
+            save_as: cache/meta.fst  
+            model: !expr suppressWarnings(yaml::read_yaml("conf/models/meta.yml"))
+
+        dt_spreadsheet:
+            order: 1
+            initialise: TRUE
+            ext: xlsx
+            init_function: init_spreadsheet
+            assign: dt_spreadsheet
+            save_as: cache/spreadsheet.fst  
+            model: !expr suppressWarnings(yaml::read_yaml("conf/models/spreadsheet.yml"))
+            extra:
+                file: "data/my_silly_spreadsheet.xlsx"
+                sheet: "Sheet1"

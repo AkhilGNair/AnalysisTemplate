@@ -1,0 +1,320 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.8.56
+RVersion: 3.4.3
+Repos: CRAN=https://cran.rstudio.com/
+
+Package: BH
+Source: CRAN
+Version: 1.65.0-1
+Hash: 95f62be4d6916aae14a310a8b56a6475
+
+Package: DBI
+Source: CRAN
+Version: 0.7
+Hash: 1ab72df487f06ad5f0de05446cdd4bd6
+
+Package: R6
+Source: CRAN
+Version: 2.2.2
+Hash: b2366cd9d2f3851a5704b4e192b985c2
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.15
+Hash: a419463fc86b3ecc7338ae3ac3bbb268
+
+Package: assertthat
+Source: CRAN
+Version: 0.2.0
+Hash: e8805df54c65ac96d50235c44a82615c
+
+Package: aws.s3
+Source: github
+Version: 0.3.8
+Hash: 57712c0c7b4475c35eae236d3125ab9e
+Requires: aws.signature, base64enc, digest, httr, xml2
+GithubRepo: aws.s3
+GithubUsername: cloudyr
+GithubRef: master
+GithubSha1: c28925d8237979273c3bc57df67629b979891a06
+RemoteHost: api.github.com
+RemoteRepo: aws.s3
+RemoteUsername: cloudyr
+RemoteSha: c28925d8237979273c3bc57df67629b979891a06
+
+Package: aws.signature
+Source: github
+Version: 0.3.6
+Hash: 9faaeb05b828c894a9caf3a9f251d64d
+Requires: base64enc, digest
+GithubRepo: aws.signature
+GithubUsername: cloudyr
+GithubRef: master
+GithubSha1: a6ca7cf9f2f5490174fedd00222bf998d66186d3
+RemoteHost: api.github.com
+RemoteRepo: aws.signature
+RemoteUsername: cloudyr
+RemoteSha: a6ca7cf9f2f5490174fedd00222bf998d66186d3
+
+Package: backports
+Source: CRAN
+Version: 1.1.2
+Hash: 5ae7b3466e529e4400951ca18c137e40
+
+Package: base64enc
+Source: CRAN
+Version: 0.1-3
+Hash: c590d29e555926af053055e23ee79efb
+
+Package: bit
+Source: CRAN
+Version: 1.1-12
+Hash: a4cdb11cf9fd6dd38f9f40c413b81e93
+
+Package: bit64
+Source: CRAN
+Version: 0.9-7
+Hash: 4b195615d19ba49c114eb04e09e30a96
+Requires: bit
+
+Package: blob
+Source: CRAN
+Version: 1.1.0
+Hash: e29764e47f2faf0cd5b74cbcddc3fa9c
+Requires: tibble
+
+Package: brew
+Source: CRAN
+Version: 1.0-6
+Hash: 931f9972deae0f205e1c78a51f33149b
+
+Package: cellranger
+Source: CRAN
+Version: 1.1.0
+Hash: 4e1ef4d099b0c5fd531a3938cf4624bd
+Requires: rematch, tibble
+
+Package: cli
+Source: CRAN
+Version: 1.0.0
+Hash: f4239f89feb7ddc65821e4514e9734ae
+Requires: assertthat, crayon
+
+Package: commonmark
+Source: CRAN
+Version: 1.2
+Hash: 1290583b9d16fb60322126a8698fb729
+
+Package: config
+Source: github
+Version: 0.2
+Hash: fcb13a7977b7401fa96c0b2c7785e906
+Requires: yaml
+GithubRepo: config
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: 733d9a2e967b362097d85a11cbf54199dc067979
+
+Package: crayon
+Source: CRAN
+Version: 1.3.4
+Hash: ff2840dd9b0d563fc80377a5a45510cd
+
+Package: curl
+Source: CRAN
+Version: 3.1
+Hash: 877149b42d479b93ab15d5cef46c0f1b
+
+Package: data.table
+Source: github
+Version: 1.10.5
+Hash: 0a2a9f14d6922a9b93467b50f69a8db5
+GithubRepo: data.table
+GithubUsername: rdatatable
+GithubRef: master
+GithubSha1: 164e5209d04ea12e591ca36559b84754d404c1c9
+RemoteHost: api.github.com
+RemoteRepo: data.table
+RemoteUsername: rdatatable
+RemoteSha: 164e5209d04ea12e591ca36559b84754d404c1c9
+
+Package: desc
+Source: CRAN
+Version: 1.1.0
+Hash: 346d3477f87b89692dd1379eaed1a1be
+Requires: R6, assertthat, crayon, rprojroot
+
+Package: devtools
+Source: CRAN
+Version: 1.13.1
+Hash: 8dadb6c6a916c8312dddc7b4d394c9f3
+Requires: digest, git2r, httr, jsonlite, memoise, rstudioapi, whisker,
+    withr
+
+Package: digest
+Source: CRAN
+Version: 0.6.15
+Hash: 1f202ebd812ac7192be3739245746a13
+
+Package: fst
+Source: CRAN
+Version: 0.8.2
+Hash: 96f7fd6085e3ade63fe1c34fb99ec5de
+Requires: Rcpp
+
+Package: git2r
+Source: CRAN
+Version: 0.18.0
+Hash: 9dfaafbcca68be29b89ef7783dc1dac0
+
+Package: hms
+Source: CRAN
+Version: 0.4.0
+Hash: 05d6cc09cc4ea93b9459734ff885e5f9
+Requires: pkgconfig, rlang
+
+Package: httr
+Source: CRAN
+Version: 1.3.1
+Hash: 2d32e01e53d532c812052e27a1021441
+Requires: R6, curl, jsonlite, mime, openssl
+
+Package: jsonlite
+Source: CRAN
+Version: 1.5
+Hash: 9c51936d8dd00b2f1d4fe9d10499694c
+
+Package: magrittr
+Source: CRAN
+Version: 1.5
+Hash: bdc4d48c3135e8f3b399536ddf160df4
+
+Package: memoise
+Source: CRAN
+Version: 1.1.0
+Hash: 410fcd334bc626db100237cc1370f2e9
+Requires: digest
+
+Package: mime
+Source: CRAN
+Version: 0.5
+Hash: 463550cf44fb6f0a2359368f42eebe62
+
+Package: odbc
+Source: CRAN
+Version: 1.1.5
+Hash: d31f0b9e60bb82fa771f26f55f82bb50
+Requires: BH, DBI, Rcpp, bit64, blob, hms
+
+Package: openssl
+Source: CRAN
+Version: 1.0
+Hash: a29e33b82230b6b07a1f1ffc5aca6b4a
+
+Package: packrat
+Source: github
+Version: 0.4.8-56
+Hash: 5e6efd13087583f924a0d4138d97dc6f
+GithubRepo: packrat
+GithubUsername: rstudio
+GithubRef: master
+GithubSha1: 7b173ab10e0ee7339349a1cddc400d3792d2b025
+
+Package: pillar
+Source: CRAN
+Version: 1.1.0
+Hash: 576bf712d620ca2b6ca76ca7b6cb5547
+Requires: cli, crayon, rlang, utf8
+
+Package: pkgconfig
+Source: CRAN
+Version: 2.0.1
+Hash: 0dda4a2654a22b36a715c2b0b6fbacac
+
+Package: purrr
+Source: CRAN
+Version: 0.2.4
+Hash: a80b244ccd3fdb33a0ff2be3c50dd648
+Requires: magrittr, rlang, tibble
+
+Package: readxl
+Source: CRAN
+Version: 1.0.0
+Hash: 4ddf09fdec11e2f253fb2beb17330aaa
+Requires: Rcpp, cellranger, tibble
+
+Package: rematch
+Source: CRAN
+Version: 1.0.1
+Hash: ad4faf59e7611117ff165817074c50c7
+
+Package: remotes
+Source: CRAN
+Version: 1.1.0
+Hash: 4a2fb938884bf4526e29d499d7b72e6b
+
+Package: rlang
+Source: CRAN
+Version: 0.1.6
+Hash: 8eb4b2dce38b8f663cb9364b28eaa76b
+
+Package: roxygen2
+Source: CRAN
+Version: 6.0.1
+Hash: 4436b7a0351046d4144ad6587081a660
+Requires: R6, Rcpp, brew, commonmark, desc, digest, stringi, stringr,
+    xml2
+
+Package: rprojroot
+Source: CRAN
+Version: 1.3-2
+Hash: a25c3f70c166fb3fbabc410eb32b6366
+Requires: backports
+
+Package: rstudioapi
+Source: CRAN
+Version: 0.7
+Hash: e2ebaff8160aff3e6b32e6e78a693c2d
+
+Package: stringi
+Source: CRAN
+Version: 1.1.6
+Hash: 4430faf2bcbe1b8de0d9be55bcfdcc0b
+
+Package: stringr
+Source: CRAN
+Version: 1.2.0
+Hash: 25a86d7f410513ebb7c0bc6a5e16bdc3
+Requires: magrittr, stringi
+
+Package: tibble
+Source: CRAN
+Version: 1.4.2
+Hash: 83895360ce4f8d2ce92eee00526b5b0b
+Requires: cli, crayon, pillar, rlang
+
+Package: utf8
+Source: CRAN
+Version: 1.1.3
+Hash: a2fe6a996668ee5850b7719f365e831b
+
+Package: whisker
+Source: CRAN
+Version: 0.3-2
+Hash: 803d662762e532705c2c066a82d066e7
+
+Package: withr
+Source: CRAN
+Version: 2.1.1
+Hash: a86856ae0b4a7c3daf9a3ef0097a403b
+
+Package: xml2
+Source: CRAN
+Version: 1.2.0
+Hash: 94e9b541116e27d80a23d436f81eda80
+Requires: Rcpp
+
+Package: yaml
+Source: CRAN
+Version: 2.1.16
+Hash: 784ea5d8302d4a81f166a32a33c10711
