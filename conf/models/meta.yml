@@ -1,0 +1,20 @@
+.id: 
+    read_name: .id
+    r_type: character
+    pk: TRUE
+
+.filename:
+    read_name: .filename
+    r_type: character
+
+name_1:
+    read_name: Name1
+    r_type: character
+
+name_2:
+    read_name: Name2
+    r_type: character
+
+name_3:
+    read_name: Name3
+    r_type: character
