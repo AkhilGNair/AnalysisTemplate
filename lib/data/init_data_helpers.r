@@ -1,11 +1,11 @@
 loader_generic = import("lib/loaders/generic")$loader_generic
 
-# (1) Not implemented
-process_my_sales_spreadsheets = import("lib/sales/process_my_sales_spreadsheets")$process_my_sales_spreadsheets
+# (1) Not implemented, this is a placeholder
+process_sales_spreadsheets = import("lib/sales/process_sales_spreadsheets")$process_sales_spreadsheets
 
-#' Initialise Telemetry Dataset
+#' Initialise Sales Dataset
 #' 
-#' Pull all telemetry datasets down from an s3 bucket and process
+#' Pull all sales datasets down from an s3 bucket and process
 #'
 #' @param config Data set specification file
 #'
@@ -13,10 +13,10 @@ process_my_sales_spreadsheets = import("lib/sales/process_my_sales_spreadsheets"
 #' @export
 init_sales = function(config, dataset) {
 
-  # Process s3 excel files and pluck out telemetry tables
+  # Process s3 excel files and pluck out sales tables
   # (1)  We know in the user-defined function here that we will be processing an S3 file
   #      Pass the s3_read_function in here instead of the config
-  list_processed = loader_generic(config$data_specification[[dataset]], s3_read_function = process_my_sales_spreadsheets)
+  list_processed = loader_generic(config$data_specification[[dataset]], s3_read_function = process_sales_spreadsheets)
   list_sales = lapply(list_processed, purrr::pluck, "sales")
   
   # Hack this into the environent instead of processing files twice
