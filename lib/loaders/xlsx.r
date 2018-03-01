@@ -14,10 +14,15 @@ loader_xlsx = function(...) {
   if(!all(expected_params %in% names(params)))
     stop("Please pass", paste0(expected_params, collapse = ", "), "to xlsx_loader")
   
-  file = params$file
-  sheet = params$sheet
+  # Construct parameter list to call read_excel with
+  excel_params = list(path = params$file, sheet = params$sheet)
   
-  dt = data.table::setDT(readxl::read_excel(path = file, sheet = sheet))
+  # If the data range is passed, add it to the called params
+  if ("range" %in% names(params)) excel_params = c(list(range = params$range), excel_params)
+  
+  # Read the excel file with specified paramaters and set as a data.table
+  dt = do.call(readxl::read_excel, excel_params)
+  data.table::setDT(dt)
   
   dt[]
   
