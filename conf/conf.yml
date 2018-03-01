@@ -35,3 +35,4 @@ default:
             extra:
                 file: "data/my_silly_spreadsheet.xlsx"
                 sheet: "Sheet1"
+                range: "B4:H15"
