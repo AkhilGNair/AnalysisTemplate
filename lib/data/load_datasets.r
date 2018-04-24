@@ -20,7 +20,7 @@ load_datasets = function(config) {
   datasets = order_datasets(datasets, config)
   
   # Walk over each dataset to process it
-  purrr::walk(datasets, load_dataset, config = config)
+  purrr::iwalk(datasets, ~ load_dataset(.x, config = config$data_specification[[.y]]))
   
 }
 
@@ -37,12 +37,12 @@ load_datasets = function(config) {
 #' @export
 load_dataset = function(dataset, config) {
   
-  cache         = config$paths$cache
-  initialise    = config$data_specification[[dataset]]$initialise
-  assign_to     = config$data_specification[[dataset]]$assign
-  init_function = config$data_specification[[dataset]]$init_function
-  filepath      = config$data_specification[[dataset]]$save_as
-  model         = config$data_specification[[dataset]]$model
+  cache         = 'cache/'
+  initialise    = config$initialise
+  assign_to     = config$assign
+  init_function = config$init_function
+  filepath      = config$save_as
+  model         = config$model
   
   # To initialise, change initialise flag in "conf/conf.yml" to TRUE
   if (file.exists(filepath)) {
@@ -64,6 +64,10 @@ load_dataset = function(dataset, config) {
     # Assign the resulting dataset to the global environment
     assign(assign_to, init_data[[init_function]](config, dataset), envir = globalenv())
     
+    # Modify all columns in place
+    colnames = purrr::map_chr(model, purrr::pluck, "read_name")
+    lapply(list_meta, setnames, unname(colnames), names(colnames))
+
     # Validate the initialised dataset against the expected model 
     # -- If some columns are cast in the model validation, we need to reassign
     assign(assign_to, validate(get(assign_to), model), envir = globalenv())

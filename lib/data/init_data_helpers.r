@@ -22,10 +22,6 @@ init_sales = function(config, dataset) {
   # Hack this into the environent instead of processing files twice
   .meta <<- lapply(list_processed, purrr::pluck, "meta")
   
-  # Modify all columns in place
-  colnames = purrr::map_chr(config$data_specification[[dataset]]$model, purrr::pluck, "read_name")
-  lapply(list_sales, setnames, unname(colnames), names(colnames))
-  
   # Bind all tables together
   dt_sales = data.table::rbindlist(list_sales)
   
@@ -45,10 +41,6 @@ init_meta = function(config, dataset) {
   list_meta = get(".meta", envir = globalenv())
   rm(.meta, envir = globalenv())  # Remove from globalenv now we have in scope
   
-  # Modify all columns in place
-  colnames = purrr::map_chr(config$data_specification[[dataset]]$model, purrr::pluck, "read_name")
-  lapply(list_meta, setnames, unname(colnames), names(colnames))
-  
   # Bind all tables together
   dt_meta = data.table::rbindlist(list_meta)
   
@@ -65,10 +57,6 @@ init_meta = function(config, dataset) {
 init_spreadsheet = function(config, dataset) {
   
   dt = loader_generic(config$data_specification[[dataset]])
-  
-  # Modify all columns in place
-  colnames = purrr::map_chr(config$data_specification[[dataset]]$model, purrr::pluck, "read_name")
-  data.table::setnames(dt, unname(colnames), names(colnames))
   
   dt
 
